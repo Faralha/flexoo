@@ -1,10 +1,12 @@
 import ButtonLink from "@/components/Buttons/ButtonLink"
+import Typography from "@/components/typography/Typography";
+
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 
 export default function SandboxPage() {
     return (
-        <main className="min-h-screen space-y-16 py-16">
+        <main className="min-h-screen space-y-16 py-16 page-max-width">
             <div className="">
                 <ButtonLink 
                     hrefPath="/"
@@ -88,6 +90,16 @@ export default function SandboxPage() {
                 </div>
 
                 
+            </section>
+
+            <section className="">
+                <div>
+                    <h1>Typography</h1>
+                </div>
+
+                <div>
+
+                </div>
             </section>
 
         </main>

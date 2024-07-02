@@ -29,21 +29,21 @@ export default function NavigationBar() {
     ]
 
     return (
-        <header className="z-50 sticky top-0 bg-white-primary py-2 ">
+        <header className="z-50 sticky top-0 bg-white-primary py-2 page-max-width">
             <div className="flex justify-between items-center bg-white-primary">
-                <figure className="relative w-[165px] h-[74px]">
-                <Link
-                    href="/"
-                >
-                    <Image 
-                        src="/logo/logo-with-text.png"
-                        fill
-                        alt="Logo Flexoo"
-                    />
-                </Link>
+                <figure className="relative w-[125px] h-[54px]  md:w-[165px] md:h-[74px]">
+                    <Link
+                        href="/"
+                    >
+                        <Image 
+                            src="/logo/logo-with-text.png"
+                            fill
+                            alt="Logo Flexoo"
+                        />
+                    </Link>
                 </figure>
 
-                <nav className="space-x-12 flex items-center">
+                <nav className="space-x-12 hidden lg:flex items-center">
                     {navs.map((nav, i) =>
                         <Link href={nav.path} key={i}>
                             {nav.name}

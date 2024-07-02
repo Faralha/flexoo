@@ -30,7 +30,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="text-black-primary">
+        <footer className="text-black-primary page-max-width">
             <div className="flex justify-between  flex-wrap gap-12">
                 <div className="space-y-5">
                     <figure className="w-[220px] h-[100px] relative">

@@ -24,7 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jakartaSans.className} page-max-width m-auto`}>
+      <body className={jakartaSans.className}>
+
         <NavigationBar />
         {children}
         <Footer />
