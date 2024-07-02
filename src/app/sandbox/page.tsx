@@ -1,26 +1,93 @@
 import ButtonLink from "@/components/Buttons/ButtonLink"
+import { FaArrowLeftLong } from "react-icons/fa6";
+
 
 export default function SandboxPage() {
     return (
-        <main className="min-h-screen">
-            <div>
-                <ButtonLink href="/">
+        <main className="min-h-screen space-y-16 py-16">
+            <div className="">
+                <ButtonLink 
+                    hrefPath="/"
+                    size="lg"
+                    leftIcon={FaArrowLeftLong} 
+                    widthVariant="min"
+                >
                     Back
                 </ButtonLink>
             </div>
 
-            <section>
+            <section className="">
                 <div>
-                    <h1 className="text-5xl">Button Link</h1>
+                    <h1>Button Link</h1>
                 </div>
-                <div>
-                    <ButtonLink 
-                        href="/"
-                        className=""
-                    >
-                        Login    
-                    </ButtonLink>   
+
+                <div className="">
+                    <div className="mt-12 border-b-[1px] border-black-primary">
+                        <h2>LG | Large</h2>
+                    </div>
+
+                    <div className="py-12 flex gap-5 flex-wrap">
+                        <ButtonLink 
+                            hrefPath="/"
+                            size="lg"
+                            variant="gold"
+                            widthVariant="base"               
+                        >
+                            Button    
+                        </ButtonLink>   
+                        <ButtonLink 
+                            hrefPath="/"
+                            size="lg"
+                            variant="blue"
+                            widthVariant="base"               
+                        >
+                            Button    
+                        </ButtonLink>   
+                        <ButtonLink 
+                            hrefPath="/"
+                            size="lg"
+                            variant="black"
+                            widthVariant="base"               
+                        >
+                            Button    
+                        </ButtonLink>   
+                    </div>
                 </div>
+
+                <div className="">
+                    <div className="mt-12 border-b-[1px] border-black-primary">
+                        <h2>MD | Medium</h2>
+                    </div>
+
+                    <div className="py-12 flex gap-5 flex-wrap">
+                        <ButtonLink 
+                            hrefPath="/"
+                            size="md"
+                            variant="gold"
+                            widthVariant="base"               
+                        >
+                            Button    
+                        </ButtonLink>   
+                        <ButtonLink 
+                            hrefPath="/"
+                            size="md"
+                            variant="blue"
+                            widthVariant="base"               
+                        >
+                            Button    
+                        </ButtonLink>   
+                        <ButtonLink 
+                            hrefPath="/"
+                            size="md"
+                            variant="black"
+                            widthVariant="base"               
+                        >
+                            Button    
+                        </ButtonLink>   
+                    </div>
+                </div>
+
+                
             </section>
 
         </main>

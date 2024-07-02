@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
+import ButtonLink from "./Buttons/ButtonLink"
 
 export default function NavigationBar() {
     const navs: {
@@ -28,22 +29,38 @@ export default function NavigationBar() {
     ]
 
     return (
-        <header className="flex justify-between items-center page-max-width sticky top-0 bg-white-primary">
-            <figure className="relative w-[165px] h-[74px]">
-                <Image 
-                    src="/logo/logo-with-text.png"
-                    fill
-                    alt="Logo Flexoo"
-                />
-            </figure>
+        <header className="z-50 sticky top-0 bg-white-primary py-2 ">
+            <div className="flex justify-between items-center bg-white-primary">
+                <figure className="relative w-[165px] h-[74px]">
+                <Link
+                    href="/"
+                >
+                    <Image 
+                        src="/logo/logo-with-text.png"
+                        fill
+                        alt="Logo Flexoo"
+                    />
+                </Link>
+                </figure>
 
-            <nav className="space-x-12">
-                {navs.map((nav, i) =>
-                    <Link href={nav.path} key={i}>
-                        {nav.name}
-                    </Link>
-                )}
-            </nav>
+                <nav className="space-x-12 flex items-center">
+                    {navs.map((nav, i) =>
+                        <Link href={nav.path} key={i}>
+                            {nav.name}
+                        </Link>
+                    )}
+
+                    <ButtonLink
+                        hrefPath="https://its.id/m/FormPengajuanProject"
+                        variant="gold"
+                        size="lg"
+                        widthVariant="base"
+                        target="_blank"
+                    >
+                        Ajukan Project
+                    </ButtonLink>
+                </nav>
+            </div>
         </header>
     )
 }
