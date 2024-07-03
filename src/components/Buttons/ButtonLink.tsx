@@ -10,16 +10,15 @@ type WidthVariant = "stretch" | "min" | "base"
 
 type ButtonLinkProps = {
     children: React.ReactNode,
-    hrefPath: string,
     variant?: ButtonVariant,
     leftIcon?: IconType,
     rightIcon?: IconType,
     size: Size,
+    hrefPath: string,
     widthVariant: WidthVariant
 } & React.ComponentPropsWithoutRef<'a'>
 
 export default function ButtonLink({ 
-    hrefPath,
     children,
     variant,
     leftIcon: LeftIcon,
@@ -27,6 +26,7 @@ export default function ButtonLink({
     size,
     widthVariant,
     className,
+    hrefPath,
     ...rest
 }: ButtonLinkProps) {
     return (
