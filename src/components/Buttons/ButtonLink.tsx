@@ -16,6 +16,8 @@ type ButtonLinkProps = {
     size: Size,
     hrefPath: string,
     widthVariant: WidthVariant
+    isShadow?: boolean,
+    isRounded?: boolean
 } & React.ComponentPropsWithoutRef<'a'>
 
 export default function ButtonLink({ 
@@ -26,6 +28,8 @@ export default function ButtonLink({
     size,
     widthVariant,
     className,
+    isShadow=true,
+    isRounded=true,
     hrefPath,
     ...rest
 }: ButtonLinkProps) {
@@ -42,15 +46,17 @@ export default function ButtonLink({
                         variant == "black" && "bg-black-primary text-white-primary",
                     ], 
                     [
-                        size == "lg" && "h-[54px] w-[185px]",
-                        size == "md" && "h-[38px] w-[185px]",
+                        size == "lg" && "h-[34px] lg:h-[54px]",
+                        size == "md" && "h-[38px]",
                     ],
                     [
                         widthVariant == "stretch" && "w-full",
                         widthVariant == "min" && "w-min",
                         widthVariant == "base" && "w-[185px]" 
                     ],
-                    "shadow-solid rounded-[4px] flex items-center justify-center gap-5 font-semibold px-4 sm:hover:opacity-70",
+                    "flex items-center justify-center gap-5 font-semibold px-4 sm:hover:opacity-70",
+                    isShadow && "shadow-solid",
+                    isRounded && "rounded-[4px]",
                     className
                 )}
             >

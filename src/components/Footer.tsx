@@ -30,8 +30,8 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="text-black-primary page-max-width">
-            <div className="flex justify-between  flex-wrap gap-12">
+        <footer className="text-black-primary page-max-width py-24">
+            <div className="flex justify-between  flex-wrap gap-12 px-4 lg:px-16">
                 <div className="space-y-5">
                     <figure className="w-[220px] h-[100px] relative">
                         <Image 
@@ -82,7 +82,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="flex gap-5 md:gap-12 items-center mt-16">
+            <div className="flex gap-5 md:gap-12 items-center mt-16 px-4 lg:px-16">
                 <div className="text-sm">
                     &#169; HMTC Software House TC 2024
                 </div>

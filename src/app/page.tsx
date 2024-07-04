@@ -3,31 +3,21 @@ import Link from "next/link";
 
 import Typography from "@/components/typography/Typography";
 import WhyChooseUsSection from "@/components/container/homepage/why-us-section/WhyChooseUsSection";
-import HeroSection from "@/components/container/homepage/hero-section/HeroSection";
+import HeroSection from "@/components/container/homepage/hero-section/HeroSection"
+import OurServicesSection from "@/components/container/homepage/services-section/OurServicesSection";
+import StandartPackageSection from "@/components/container/homepage/package-section/standart/StandartPackageSection";
+import FlexiblePackageSection from "@/components/container/homepage/package-section/fleksibel/FlexiblePackageSection";
+import FaqSection from "@/components/container/homepage/faq-section/FaqSection";
 
 export default function Home() {
   return (
     <main className="min-h-[50vh] pb-16 page-max-width">
       <HeroSection />
-
-      <section className="py-16">
-        <div className="text-center  md:space-y-5">
-          <Typography 
-            weight="bold"
-            variant="h1"
-          >
-            Mengapa Flexoo menjadi pilihan terbaik?
-          </Typography>
-          <Typography
-            weight="regular"
-            variant="h3"
-          >
-            Why Choose Us?
-          </Typography>
-        </div>
-
-        <WhyChooseUsSection />
-      </section>
+      <WhyChooseUsSection />
+      <OurServicesSection />
+      <StandartPackageSection />
+      <FlexiblePackageSection />
+      <FaqSection />
     </main>
   );
 }

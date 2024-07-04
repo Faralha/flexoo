@@ -29,7 +29,7 @@ export default function NavigationBar() {
     ]
 
     return (
-        <header className="z-50 sticky top-0 bg-white-primary py-2">
+        <header className="z-50 sticky top-0 bg-white-primary py-1">
             <div className="flex justify-between items-center bg-white-primary page-max-width">
                 <figure className="relative w-[125px] h-[54px]  md:w-[165px] md:h-[74px]">
                     <Link

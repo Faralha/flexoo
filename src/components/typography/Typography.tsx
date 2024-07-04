@@ -31,7 +31,7 @@ export default function Typography({
                 className,
                 [
                     weight == "bold" && "font-bold",
-                    weight == "semibold" && "font-semibodl",
+                    weight == "semibold" && "font-semibold",
                     weight == "regular" && "font-normal"
                 ]
             )}
