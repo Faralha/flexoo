@@ -1,6 +1,6 @@
 import Typography from "@/components/typography/Typography";
 import FaqItem from "./FaqItems";
-import { LuPlus, LuMinus } from "react-icons/lu";
+import { faqData } from "./data";
 
 
 export default function FaqSection() {
@@ -15,8 +15,14 @@ export default function FaqSection() {
                 </Typography>
             </div>
 
-            <div className="mt-24">
-                <FaqItem />
+            <div className="mt-12 md:mt-24 space-y-3 md:space-y-5">
+                {faqData.map((data, i) =>
+                    <FaqItem
+                        key={i} 
+                        summary={data.summary}
+                        details={data.details}
+                    />
+                )}
             </div>
 
         </section>

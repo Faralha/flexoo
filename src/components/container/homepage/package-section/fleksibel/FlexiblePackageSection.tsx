@@ -17,7 +17,7 @@ export default function FlexiblePackageSection() {
                 </Typography>
             </div>
 
-            <div className="space-y-6 max-w-[560px] flex-1">
+            <div className="space-y-6 max-w-[560px] flex-1 md:ml-32">
                 {flexiblePackageData.map((data, i) =>
                     <div 
                         key={i} 

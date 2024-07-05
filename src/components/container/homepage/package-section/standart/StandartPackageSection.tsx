@@ -18,7 +18,7 @@ export default function StandartPackageSection() {
                 </Typography>
             </div>
 
-            <div className="grid grid-cols-1 max-w-[314px] m-auto md:max-w-none md:grid-cols-3 gap-5 mt-12 md:mt-24">
+            <div className="grid grid-cols-1 max-w-[274px] m-auto md:max-w-none md:grid-cols-3 gap-5 mt-12 md:mt-24">
                 {standartPackageData.map((data, i) =>
                     <StandartPackageItem 
                         key={i}
