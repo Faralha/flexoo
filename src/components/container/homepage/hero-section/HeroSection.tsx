@@ -4,7 +4,7 @@ import Typography from "@/components/typography/Typography";
 
 export default function HeroSection() {
     return (
-        <section className="bg-berkeley-blue md:min-h-[75vh] rounded-[15px] lg:rounded-[28px] gap-12 md:gap-24 flex lg:flex-row flex-col items-center justify-between px-[30px] xl:px-[60px] py-[46px]">
+        <section className="bg-berkeley-blue min-h-0 md:min-h-[75vh] rounded-[15px] lg:rounded-[28px] gap-12 md:gap-24 flex lg:flex-row flex-col items-center justify-between px-[30px] xl:px-[60px] py-[46px]">
             <div className="flex-1 space-y-5 text-white-primary">
             <Typography weight="regular">
                 #FlexingYourWebsite

@@ -5,6 +5,7 @@ export default function OurServicesSection() {
     return (
         <section 
             className="py-16 flex gap-12 md:gap-24 flex-col sm:flex-row px-4 lg:px-12"
+            id="layanan"
         >
             <div className="flex-1">
                 <Typography

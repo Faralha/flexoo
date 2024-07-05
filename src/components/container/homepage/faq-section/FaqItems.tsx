@@ -14,7 +14,7 @@ export default function FaqItem({
     const [open, setOpen] = useState<boolean>(false)
 
     return (
-        <div className={`${open ? "bg-berkeley-blue text-white" : "bg-stone-100"} border-b-[1px] border-black-primary px-[10px] py-[10px] md:px-[25px] md:py-[20px] cursor-pointer `}>
+        <div className={`${open ? "bg-berkeley-blue text-white" : "bg-stone-100"} border-b-[1px] border-black-primary px-[10px] py-[10px] md:px-[25px] md:py-[20px] cursor-pointer transition-all ease-in`}>
             <div 
                 className="flex items-center justify-between gap-5"
                 onClick={() => setOpen(prev => !prev)}
@@ -25,7 +25,7 @@ export default function FaqItem({
                     {summary}
                 </Typography>
 
-                <div className={`text-xl md:text-2xl ${open ? "bg-gold-primary" : "bg-stone-200"} p-2 rounded-md text-black-primary`}>
+                <div className={`text-xl md:text-2xl ${open ? "bg-gold-primary" : "bg-stone-200"} p-2 rounded-sm text-black-primary`}>
                     {
                         open ? 
                         <LuMinus /> 
@@ -35,7 +35,7 @@ export default function FaqItem({
                 </div>
             </div>
 
-            <div className={`${open ? "max-h-[800px]" : "max-h-0"} overflow-hidden transition-max-height ease-in-out duration-800 pt-3 space-y-2`}>
+            <div className={`${open ? "max-h-[800px]" : "max-h-0"} overflow-hidden transition-max-height ease-in-out duration-5s00 pt-3 space-y-2`}>
                     {details.map((detail, i) => 
                          <Typography key={i}>
                             {detail}

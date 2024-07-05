@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import Typography from "@/components/typography/Typography";
 import { type Package, standartPackageData } from "./data";
 import { RxCross1 } from "react-icons/rx";
@@ -8,7 +6,7 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
 
 export default function StandartPackageSection() {
     return (
-        <section className="py-12">
+        <section className="py-12" id="paket">
             <div className="text-center">
                 <Typography
                     weight="bold"

@@ -9,7 +9,7 @@ export default function WhyChooseUsSection() {
 
     return (
         <section className="py-16">
-          <div className="text-center  md:space-y-5">
+          <div className="text-center md:space-y-5">
             <Typography 
               weight="bold"
               variant="h1"

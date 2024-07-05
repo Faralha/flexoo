@@ -5,7 +5,7 @@ import { faqData } from "./data";
 
 export default function FaqSection() {
     return (
-        <section className="py-24 max-w-[1200px] m-auto">
+        <section className="py-24 max-w-[1200px] m-auto" id="faq">
             <div>
                 <Typography
                     variant="h1"
