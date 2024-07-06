@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Typography from "@/components/typography/Typography";
 import { type Package, standartPackageData } from "./data";
 import { RxCross1 } from "react-icons/rx";
@@ -6,14 +8,24 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
 
 export default function StandartPackageSection() {
     return (
-        <section className="py-12" id="paket">
-            <div className="text-center">
-                <Typography
-                    weight="bold"
-                    variant="h1"
-                >
-                    Paket Standar Website
-                </Typography>
+        <section className="py-12 mt-12" id="paket">
+            <div className="flex justify-center">
+                <div className="w-max relative">
+                    <figure className="absolute w-[48px] h-[42px] md:w-[72.21px] md:h-[58.38px] right-[-40px] top-[-30px] md:right-[-50px] md:top-[-40px]">
+                        <Image 
+                            src="/assets/3-lines-vect.png"
+                            fill
+                            alt="vector"
+                        />
+                    </figure>
+                    
+                    <Typography
+                        weight="bold"
+                        variant="h1"
+                    >
+                        Paket Standar Website
+                    </Typography>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 max-w-[274px] m-auto md:max-w-none md:grid-cols-3 gap-5 mt-12 md:mt-24">
@@ -55,7 +67,7 @@ function StandartPackageItem({
             </div>
 
             <ButtonLink
-                hrefPath="/"
+                hrefPath="https://its.id/m/FormPengajuanProject"
                 variant="blue"
                 widthVariant="stretch"
                 size="lg"

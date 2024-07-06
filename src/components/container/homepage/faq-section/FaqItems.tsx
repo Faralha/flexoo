@@ -20,7 +20,7 @@ export default function FaqItem({
                 onClick={() => setOpen(prev => !prev)}
             >
                 <Typography
-                    variant="h4"
+                    variant="p"
                 >
                     {summary}
                 </Typography>
@@ -35,9 +35,9 @@ export default function FaqItem({
                 </div>
             </div>
 
-            <div className={`${open ? "max-h-[800px]" : "max-h-0"} overflow-hidden transition-max-height ease-in-out duration-5s00 pt-3 space-y-2`}>
+            <div className={`${open ? "max-h-[800px]" : "max-h-0"} overflow-hidden transition-max-height ease-in-out pt-3 space-y-2`}>
                     {details.map((detail, i) => 
-                         <Typography key={i}>
+                        <Typography key={i}>
                             {detail}
                         </Typography>
                     )}

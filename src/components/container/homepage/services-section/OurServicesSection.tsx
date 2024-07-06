@@ -20,9 +20,7 @@ export default function OurServicesSection() {
                 {servicesData.map((data, i) => 
                     <ServicesItem 
                         key={i}
-                        heading={data.heading}
-                        body={data.body}
-                        icon={data.icon}
+                        {...data}
                     />
                 )}
             </div>

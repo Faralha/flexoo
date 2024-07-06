@@ -6,7 +6,6 @@ import ButtonLink from "./Buttons/ButtonLink"
 import { RiMenu3Fill } from "react-icons/ri";
 
 import { useState } from "react";
-import { defaultOverrides } from "next/dist/server/require-hook";
 
 const navs: {
     name: string,
@@ -60,7 +59,7 @@ export default function NavigationBar() {
                         onClick={() => setOpen(prev => !prev)}
                     >
                         <RiMenu3Fill className="text-lg" />
-                        Menu
+                        {open ? "Close" : "Menu"}
                     </button>
                     {
                         open && 
@@ -82,6 +81,7 @@ function NavigationItems() {
                     href={nav.path} 
                     key={i} 
                     className="font-semibold hover:border-b-[1px] hover:border-black-primary"
+                
                 >
                     {nav.name}
                 </Link>

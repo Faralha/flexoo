@@ -15,7 +15,7 @@ export default function FaqSection() {
                 </Typography>
             </div>
 
-            <div className="mt-12 md:mt-24 space-y-3 md:space-y-5">
+            <div className="mt-12">
                 {faqData.map((data, i) =>
                     <FaqItem
                         key={i} 

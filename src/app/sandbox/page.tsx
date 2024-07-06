@@ -12,7 +12,7 @@ export default function SandboxPage() {
                     hrefPath="/"
                     size="lg"
                     leftIcon={FaArrowLeftLong} 
-                    widthVariant="min"
+                    widthVariant="max"
                 >
                     Back
                 </ButtonLink>

@@ -1,6 +1,7 @@
 import Typography from "@/components/typography/Typography";
 import { flexiblePackageData } from "./data";
 import { PiStarFourFill } from "react-icons/pi";
+import ButtonLink from "@/components/Buttons/ButtonLink";
 
 
 export default function FlexiblePackageSection() {
@@ -34,6 +35,17 @@ export default function FlexiblePackageSection() {
                         </Typography>
                     </div>
                 )}
+            </div>
+
+            <div className="flex justify-center">
+                <ButtonLink
+                    variant="gold"
+                    hrefPath="https://its.id/m/FormPengajuanProject"
+                    widthVariant="max"
+                    size="lg"
+                >
+                    Coba paket fleksibel
+                </ButtonLink>
             </div>
         </section>
     )

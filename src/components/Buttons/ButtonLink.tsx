@@ -6,7 +6,7 @@ import { IconType } from "react-icons"
 
 type ButtonVariant = "gold" | "blue" | "black"
 type Size = "lg" | "md" 
-type WidthVariant = "stretch" | "min" | "base"
+type WidthVariant = "stretch" | "max" | "base"
 
 type ButtonLinkProps = {
     children: React.ReactNode,
@@ -51,7 +51,7 @@ export default function ButtonLink({
                     ],
                     [
                         widthVariant == "stretch" && "w-full",
-                        widthVariant == "min" && "w-min",
+                        widthVariant == "max" && "w-max",
                         widthVariant == "base" && "w-[185px]" 
                     ],
                     "flex items-center justify-center gap-5 font-semibold px-4 sm:hover:opacity-70",
