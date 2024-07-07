@@ -33,7 +33,7 @@ export default function SandboxPage() {
                             hrefPath="/"
                             size="lg"
                             variant="gold"
-                            widthVariant="base"               
+                            widthVariant="max"               
                         >
                             Button    
                         </ButtonLink>   
@@ -41,7 +41,7 @@ export default function SandboxPage() {
                             hrefPath="/"
                             size="lg"
                             variant="blue"
-                            widthVariant="base"               
+                            widthVariant="max"               
                         >
                             Button    
                         </ButtonLink>   
@@ -49,7 +49,7 @@ export default function SandboxPage() {
                             hrefPath="/"
                             size="lg"
                             variant="black"
-                            widthVariant="base"               
+                            widthVariant="max"               
                         >
                             Button    
                         </ButtonLink>   
@@ -66,7 +66,7 @@ export default function SandboxPage() {
                             hrefPath="/"
                             size="md"
                             variant="gold"
-                            widthVariant="base"               
+                            widthVariant="max"               
                         >
                             Button    
                         </ButtonLink>   
@@ -74,7 +74,7 @@ export default function SandboxPage() {
                             hrefPath="/"
                             size="md"
                             variant="blue"
-                            widthVariant="base"               
+                            widthVariant="max"               
                         >
                             Button    
                         </ButtonLink>   
@@ -82,7 +82,7 @@ export default function SandboxPage() {
                             hrefPath="/"
                             size="md"
                             variant="black"
-                            widthVariant="base"               
+                            widthVariant="max"               
                         >
                             Button    
                         </ButtonLink>   
@@ -94,7 +94,7 @@ export default function SandboxPage() {
 
             <section className="">
                 <div>
-                    <h1>Typography</h1>
+                    <Typography variant="h1">Typography</Typography>
                 </div>
 
                 <div>

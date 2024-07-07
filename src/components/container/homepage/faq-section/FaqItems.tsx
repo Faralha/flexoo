@@ -21,6 +21,7 @@ export default function FaqItem({
             >
                 <Typography
                     variant="p"
+                    weight="bold"
                 >
                     {summary}
                 </Typography>

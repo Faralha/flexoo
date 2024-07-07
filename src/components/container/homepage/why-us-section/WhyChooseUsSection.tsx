@@ -29,7 +29,7 @@ export default function WhyChooseUsSection() {
                 key={i}
                 className="bg-berkeley-blue shadow-solid p-[20px] rounded-md min-h-[230px] text-white-primary space-y-[14px]"
               >
-                <div className="bg-gold-primary w-min p-2 text-[38px] text-black-primary">
+                <div className="bg-gold-primary rounded-md w-min p-2 text-[38px] text-black-primary">
                   <IoMdCheckmarkCircleOutline />
                 </div>
                 <Typography

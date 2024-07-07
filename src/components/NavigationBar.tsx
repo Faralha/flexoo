@@ -5,7 +5,7 @@ import Image from "next/image"
 import ButtonLink from "./Buttons/ButtonLink"
 import { RiMenu3Fill } from "react-icons/ri";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 const navs: {
     name: string,
@@ -14,21 +14,20 @@ const navs: {
 }[] = [
     {
         name: "Tentang",
-        path: "#tentang"
+        path: "/about"
     },
     {
         name: "Layanan Kami",
-        path: "#layanan"
+        path: "/#layanan"
     },
     {
         name: "Paket",
-        path: "#paket"
+        path: "/#paket"
     },
     {
         name: "FAQ",
-        path: "#faq"
+        path: "/#faq"
     },
-
 ]
 
 export default function NavigationBar() {
@@ -50,7 +49,7 @@ export default function NavigationBar() {
                 </figure>
 
                 <nav className="space-x-12 hidden lg:flex items-center transition-all ease-in">
-                    <NavigationItems />
+                    <NavigationItems setOpen={setOpen} />
                 </nav>
 
                 <div className="block lg:hidden relative">
@@ -64,7 +63,7 @@ export default function NavigationBar() {
                     {
                         open && 
                         <nav className="flex flex-col gap-5 absolute top-12 right-0 bg-white-primary p-4 shadow-2xl rounded-md">
-                            <NavigationItems />
+                            <NavigationItems setOpen={setOpen} />
                         </nav>
                     }
                 </div>
@@ -73,7 +72,11 @@ export default function NavigationBar() {
     )
 }
 
-function NavigationItems() {
+function NavigationItems({
+    setOpen
+}: {
+    setOpen: Dispatch<SetStateAction<boolean>>
+}) {
     return (
         <>
             {navs.map((nav, i) =>
@@ -81,7 +84,7 @@ function NavigationItems() {
                     href={nav.path} 
                     key={i} 
                     className="font-semibold hover:border-b-[1px] hover:border-black-primary"
-                
+                    onClick={() => setOpen(prev => !prev)}
                 >
                     {nav.name}
                 </Link>
@@ -91,7 +94,7 @@ function NavigationItems() {
                 hrefPath="https://its.id/m/FormPengajuanProject"
                 variant="gold"
                 size="lg"
-                widthVariant="base"
+                widthVariant="max"
                 target="_blank"
             >
                 Ajukan Project

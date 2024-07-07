@@ -3,8 +3,6 @@ import Link from "next/link"
 
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6"
 
-
-
 export default function Footer() {
 
     const navsOption: {
@@ -13,19 +11,19 @@ export default function Footer() {
     }[] = [
         {
             name: "Tentang",
-            path: "#tentang"
+            path: "/about"
         },
         {
             name: "Layanan Kami",
-            path: "#layanan"
+            path: "/#layanan"
         },
         {
             name: "Paket",
-            path: "#paket"
+            path: "/#paket"
         },
         {
             name: "FAQ",
-            path: "#faq"
+            path: "/#faq"
         },
     ]
 
@@ -33,13 +31,17 @@ export default function Footer() {
         <footer className="text-black-primary page-max-width py-24">
             <div className="flex justify-between  flex-wrap gap-12 px-4 lg:px-16">
                 <div className="space-y-5">
-                    <figure className="w-[220px] h-[100px] relative">
-                        <Image 
-                            src="/logo/logo-with-text.png"
-                            alt="logo flexoo"
-                            fill
-                        />
-                    </figure>
+                    <Link
+                        href="/"
+                    >
+                        <figure className="w-[220px] h-[100px] relative">
+                            <Image 
+                                src="/logo/logo-with-text.png"
+                                alt="logo flexoo"
+                                fill
+                            />
+                        </figure>
+                    </Link>
 
                     <div className="max-w-[440px] space-y-5">
 
