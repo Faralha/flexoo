@@ -1,17 +1,27 @@
 "use client"
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 
 import ButtonLink from "./Buttons/ButtonLink"
 import { RiMenu3Fill } from "react-icons/ri";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 import { Dispatch, SetStateAction, useState } from "react";
 
-const navs: {
+type NavLink = {
     name: string,
-    path: string,
-    contents?: string[] | undefined
-}[] = [
+    path: string
+} 
+
+type Submenu = {
+    submenu?: NavLink[]
+}
+
+type Navs = NavLink & Submenu
+
+
+const navs: Navs[] = [
     {
         name: "Tentang",
         path: "/about"
@@ -22,7 +32,17 @@ const navs: {
     },
     {
         name: "Paket",
-        path: "/#paket"
+        path: "",
+        submenu: [
+            {
+                name: "Paket Standar",
+                path: "/#paket-standar"
+            },
+            {
+                name: "Paket Fleksibel",
+                path: "/#paket-fleksibel"
+            },
+        ]
     },
     {
         name: "FAQ",
@@ -49,7 +69,10 @@ export default function NavigationBar() {
                 </figure>
 
                 <nav className="space-x-12 hidden lg:flex items-center transition-all ease-in">
-                    <NavigationItems setOpen={setOpen} />
+                    <NavigationItems 
+                        setOpen={setOpen} 
+                        isMobileView={false}
+                    />
                 </nav>
 
                 <div className="block lg:hidden relative">
@@ -63,7 +86,10 @@ export default function NavigationBar() {
                     {
                         open && 
                         <nav className="flex flex-col gap-5 absolute top-12 right-0 bg-white-primary p-4 shadow-2xl rounded-md">
-                            <NavigationItems setOpen={setOpen} />
+                            <NavigationItems 
+                                setOpen={setOpen} 
+                                isMobileView={true}
+                            />
                         </nav>
                     }
                 </div>
@@ -73,21 +99,44 @@ export default function NavigationBar() {
 }
 
 function NavigationItems({
-    setOpen
+    setOpen,
+    isMobileView
 }: {
-    setOpen: Dispatch<SetStateAction<boolean>>
+    setOpen: Dispatch<SetStateAction<boolean>>,
+    isMobileView: boolean
 }) {
+    const [subOpen, setSubOpen] = useState<boolean>(false)
+
     return (
         <>
             {navs.map((nav, i) =>
-                <Link 
-                    href={nav.path} 
-                    key={i} 
-                    className="font-semibold hover:border-b-[1px] hover:border-black-primary"
-                    onClick={() => setOpen(prev => !prev)}
-                >
-                    {nav.name}
-                </Link>
+                <React.Fragment key={i}>
+                    {nav.submenu ? (
+                        <div
+                            onClick={() => setSubOpen(prev => !prev)}
+                            className="relative text-bordered-hover"
+                            role="button"
+                        >
+                            <div className="flex items-center gap-1">
+                                {nav.name}
+                                <MdKeyboardArrowDown className="text-2xl" />
+                            </div>
+                            {subOpen && (
+                                <div className={`bg-gold-primary flex flex-col space-y-3 ${isMobileView ? "p-2" : "absolute shadow-2xl p-5 top-8 w-max rounded-md"}`}>
+                                    {nav.submenu.map((subnav, j) => (
+                                        <NavLink {...subnav} key={j} />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <NavLink 
+                            {...nav}
+                            key={i}
+                            onClick={() => setOpen(prev => !prev)}
+                        />
+                    )}
+                </React.Fragment>
             )}
 
             <ButtonLink
@@ -100,5 +149,22 @@ function NavigationItems({
                 Ajukan Project
             </ButtonLink>
         </>
+    )
+}
+
+function NavLink({ 
+    name, 
+    path 
+}: NavLink & { 
+    onClick?: () => void 
+}) {
+    return (
+        <Link
+            href={path}
+            role="button"
+            className="text-bordered-hover"
+        >
+            {name}
+        </Link>
     )
 }

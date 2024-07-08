@@ -6,6 +6,10 @@
   .page-max-width {
     @apply max-w-[1450px] m-auto px-3 
   }
+
+  .text-bordered-hover {
+    @apply font-semibold hover:border-b-[1px] hover:border-black-primary
+  }
 }
 
 @layer base {

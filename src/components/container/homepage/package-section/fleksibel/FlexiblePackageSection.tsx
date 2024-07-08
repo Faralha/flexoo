@@ -7,7 +7,10 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
 export default function FlexiblePackageSection() {
     
     return (
-        <section className="py-12 md:py-24 flex gap-12 md:gap-24 flex-col max-w-[1200px] m-auto">
+        <section 
+            className="py-12 md:py-24 flex gap-12 md:gap-24 flex-col max-w-[1200px] m-auto"
+            id="paket-fleksibel"
+        >
             <div className="flex-1 text-center">
                 <Typography
                     variant="h1"

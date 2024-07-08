@@ -8,7 +8,7 @@ import ButtonLink from "@/components/Buttons/ButtonLink";
 
 export default function StandartPackageSection() {
     return (
-        <section className="py-12 mt-12" id="paket">
+        <section className="py-12 mt-12" id="paket-standar">
             <div className="flex justify-center">
                 <div className="w-max relative">
                     <figure className="absolute w-[48px] h-[42px] md:w-[72.21px] md:h-[58.38px] right-[-40px] top-[-30px] md:right-[-50px] md:top-[-40px]">
@@ -83,10 +83,11 @@ function StandartPackageItem({
                         className="flex items-center gap-3"
                     >
                         <div className="text-2xl xl:text-4xl">
-                            {
-                                pkg.isincluded ?
-                                <IoCheckmark /> : <RxCross1 />
-                            }
+                            {pkg.isincluded ? (
+                                <IoCheckmark /> 
+                            ) : (
+                                <RxCross1 />
+                            )}
                         </div>
 
                         <Typography
