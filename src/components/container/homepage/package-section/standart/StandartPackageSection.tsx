@@ -33,9 +33,7 @@ export default function StandartPackageSection() {
                     <StandartPackageItem 
                         key={i}
                         index={i}
-                        type={data.type}
-                        price={data.price}
-                        packageDetails={data.packageDetails}
+                        {...data}
                     />
                 )}
             </div>
