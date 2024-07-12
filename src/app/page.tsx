@@ -11,7 +11,7 @@ import FaqSection from "@/components/container/homepage/faq-section/FaqSection";
 
 export default function Home() {
   return (
-    <main className="min-h-[50vh] pb-16 page-max-width">
+    <main className="page-max-width">
       <HeroSection />
       <WhyChooseUsSection />
       <OurServicesSection />
