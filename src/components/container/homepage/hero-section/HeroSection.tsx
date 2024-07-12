@@ -15,8 +15,7 @@ export default function HeroSection() {
                         variant="h2"
                         weight="bold"
                     >
-                        Apakah kamu memerlukan website untuk tugas, lomba, event, 
-                        atau bisnis kamu?
+                        Butuh website untuk tugas, lomba, event, atau bisnis?
                     </Typography>
                     <Typography weight="regular">
                         Di era digital yang dinamis, website bukan lagi kemewahan, 
@@ -30,9 +29,9 @@ export default function HeroSection() {
                     size="lg"
                     variant="gold"
                     widthVariant="max"
-                    hrefPath="/about"
+                    hrefPath="https://its.id/m/FormPengajuanProject"
                 >
-                    Tentang Kami
+                    Ajukan Project
                 </ButtonLink>
             </div>
 
