@@ -20,7 +20,6 @@ type Submenu = {
 
 type Navs = NavLink & Submenu
 
-
 const navs: Navs[] = [
     {
         name: "Tentang",
