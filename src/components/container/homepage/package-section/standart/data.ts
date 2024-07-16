@@ -23,7 +23,7 @@ export const standartPackageData: Package[] = [
                 isincluded: true,
             },
             {
-                detail: "Responsive Web",
+                detail: "Free Set up Hosting & Domain",
                 isincluded: true,
             },
             {
@@ -49,7 +49,7 @@ export const standartPackageData: Package[] = [
                 isincluded: true,
             },
             {
-                detail: "Responsive Web",
+                detail: "Free Set up Hosting & Domain",
                 isincluded: true,
             },
             {
@@ -75,7 +75,7 @@ export const standartPackageData: Package[] = [
                 isincluded: true,
             },
             {
-                detail: "Responsive Web",
+                detail: "Free Set up Hosting & Domain",
                 isincluded: true,
             },
             {
