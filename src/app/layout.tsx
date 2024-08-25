@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Flexoo - Software House",
     description: "Flexoo software house TC",
     siteName: "Flexoo",
-    images: ["https://flexoo.vercel.app/logo-with-text.png"],
+    images: ["https://flexoo.vercel.app/logo/logo-with-text.png"],
     type: "website",
     locale: "id_ID",
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Flexoo - Software House",
     card: "summary_large_image",
     description: "Flexoo software house TC",
-    images: ["https://flexoo.vercel.app/og.png"],
+    images: ["https://flexoo.vercel.app/logo/logo-with-text.png"],
   },
 };
 
