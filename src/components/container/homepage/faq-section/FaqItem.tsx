@@ -1,5 +1,5 @@
 "use client"
-import Typography from "@/components/typography/Typography"
+import Typography from "@/components/Typography"
 import { LuPlus, LuMinus } from "react-icons/lu"
 
 import { useState } from "react"

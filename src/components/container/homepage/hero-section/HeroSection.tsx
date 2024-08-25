@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Typography from "@/components/typography/Typography";
+import Typography from "@/components/Typography";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 
 export default function HeroSection() {

@@ -1,5 +1,8 @@
-import Typography from "@/components/typography/Typography";
-import { servicesData } from "./utils/data";
+import Typography from "@/components/Typography";
+import { IconType } from "react-icons"
+import { CiGlobe, CiMobile1 } from "react-icons/ci";
+import { PiBrainLight } from "react-icons/pi";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 export default function OurServicesSection() {
     return (
@@ -18,39 +21,54 @@ export default function OurServicesSection() {
 
             <div className="flex gap-5 flex-col flex-1">
                 {servicesData.map((data, i) => 
-                    <ServicesItem 
-                        key={i}
-                        {...data}
-                    />
+                    <div
+                        key={i}  
+                        className="border-b-[1px] border-black-primary pb-8 max-w-[560px] flex items-center gap-5 rounded-[8px]"
+                    >
+                        <div className="text-3xl md:text-5xl bg-gold-primary p-3 rounded-lg">
+                            <data.icon />
+                        </div>
+            
+                        <div className="flex-1">
+                            <Typography
+                                variant="h3"
+                                weight="bold"
+                            >
+                                {data.heading}
+                            </Typography>
+            
+                            <Typography
+                                variant="p"
+                            >
+                                {data.body}
+                            </Typography>
+                        </div>
+                    </div>
                 )}
             </div>
         </section>
     )
 }
 
-function ServicesItem({ heading, body, icon: Icon }: typeof servicesData[number]) {
-    return (
-        <div 
-            className="border-b-[1px] border-black-primary pb-8 max-w-[560px] flex items-center gap-5 rounded-[8px]"
-        >
-            <div className="text-3xl md:text-5xl bg-gold-primary p-3 rounded-lg">
-                <Icon />
-            </div>
-
-            <div className="flex-1">
-                <Typography
-                    variant="h3"
-                    weight="bold"
-                >
-                    {heading}
-                </Typography>
-
-                <Typography
-                    variant="p"
-                >
-                    {body}
-                </Typography>
-            </div>
-        </div>
-    )
-}
+export const servicesData = [
+    {
+        heading: "Website",
+        body: "Flexoo menyediakan layanan pembuatan website untuk kebutuhan bisnis, lomba, tugas, maupun pribadi.",
+        icon: CiGlobe
+    },
+    {
+        heading: "Mobile App",
+        body: "Flexoo menyediakan layanan pembuatan aplikasi berbasis mobile.",
+        icon: CiMobile1
+    },
+    {
+        heading: "AI/ML",
+        body: "Flexoo menyediakan layanan pembuatan produk artificial intelligence atau machine learning",
+        icon: PiBrainLight
+    },
+    {
+        heading: "Lainnya",
+        body: "Flexoo juga menyediakan layanan produk digital lain seperti IoT, Game, dll.",
+        icon: HiOutlineDotsHorizontal
+    }
+]

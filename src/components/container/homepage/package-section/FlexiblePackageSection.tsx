@@ -1,5 +1,4 @@
-import Typography from "@/components/typography/Typography";
-import { flexiblePackageData } from "./data";
+import Typography from "@/components/Typography";
 import { PiStarFourFill } from "react-icons/pi";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 
@@ -53,3 +52,11 @@ export default function FlexiblePackageSection() {
         </section>
     )
 }
+
+const flexiblePackageData = [
+    "menuliskan sendiri ekspektasi biaya proyeknya",
+    "membuat produk selain website",
+    "dibantu di hanya sebagian SDM IT, seperti dibantu hanya untuk Frontend, Backend, atau UI/UX saja",
+    "dibantu di sisa progress yang ada",
+    "mengatur sendiri waktu pengerjaannya berapa lama",
+]

@@ -1,4 +1,4 @@
-import Typography from "@/components/typography/Typography";
+import Typography from "@/components/Typography";
 import ButtonLink from "@/components/Buttons/ButtonLink";
 import { IoHomeOutline } from "react-icons/io5";
 

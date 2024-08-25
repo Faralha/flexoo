@@ -1,5 +1,5 @@
 import ButtonLink from "@/components/Buttons/ButtonLink"
-import Typography from "@/components/typography/Typography";
+import Typography from "@/components/Typography";
 
 import { FaArrowLeftLong } from "react-icons/fa6";
 
