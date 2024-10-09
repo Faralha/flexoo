@@ -4,29 +4,6 @@ import Link from "next/link"
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6"
 
 export default function Footer() {
-
-    const navsOption: {
-        name: string,
-        path: string
-    }[] = [
-        {
-            name: "Tentang",
-            path: "/about"
-        },
-        {
-            name: "Layanan Kami",
-            path: "/#layanan"
-        },
-        {
-            name: "Paket",
-            path: "/#paket"
-        },
-        {
-            name: "FAQ",
-            path: "/#faq"
-        },
-    ]
-
     return (
         <footer className="text-black-primary page-max-width py-24">
             <div className="flex justify-between  flex-wrap gap-12 px-4 lg:px-16">
@@ -96,3 +73,27 @@ export default function Footer() {
         </footer>
     )
 }
+
+
+const navsOption: {
+    name: string,
+    path: string
+}[] = [
+    {
+        name: "Tentang",
+        path: "/about"
+    },
+    {
+        name: "Layanan Kami",
+        path: "/#layanan"
+    },
+    {
+        name: "Paket",
+        path: "/#paket"
+    },
+    {
+        name: "FAQ",
+        path: "/#faq"
+    },
+]
+

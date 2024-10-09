@@ -20,35 +20,6 @@ type Submenu = {
 
 type Navs = NavLink & Submenu
 
-const navs: Navs[] = [
-    {
-        name: "Tentang",
-        path: "/about"
-    },
-    {
-        name: "Layanan Kami",
-        path: "/#layanan"
-    },
-    {
-        name: "Paket",
-        path: "",
-        submenu: [
-            {
-                name: "Paket Standar",
-                path: "/#paket-standar"
-            },
-            {
-                name: "Paket Fleksibel",
-                path: "/#paket-fleksibel"
-            },
-        ]
-    },
-    {
-        name: "FAQ",
-        path: "/#faq"
-    },
-]
-
 export default function NavigationBar() {
     const [open, setOpen] = useState<boolean>(false)    
 
@@ -123,17 +94,25 @@ function NavigationItems({
                             {subOpen && (
                                 <div className={`bg-gold-primary flex flex-col space-y-3 ${isMobileView ? "p-2" : "absolute shadow-2xl p-5 top-8 w-max rounded-md"}`}>
                                     {nav.submenu.map((subnav, j) => (
-                                        <NavLink {...subnav} key={j} />
+                                        <Link 
+                                            href={subnav.path}
+                                            onClick={() => setOpen(prev => !prev)}
+                                            key={j}
+                                        >
+                                            {subnav.name}    
+                                        </Link>
                                     ))}
                                 </div>
                             )}
                         </div>
                     ) : (
-                        <NavLink 
-                            {...nav}
+                        <Link
+                            href={nav.path}
                             key={i}
                             onClick={() => setOpen(prev => !prev)}
-                        />
+                        >
+                            {nav.name}
+                        </Link>
                     )}
                 </React.Fragment>
             )}
@@ -151,19 +130,32 @@ function NavigationItems({
     )
 }
 
-function NavLink({ 
-    name, 
-    path 
-}: NavLink & { 
-    onClick?: () => void 
-}) {
-    return (
-        <Link
-            href={path}
-            role="button"
-            className="text-bordered-hover"
-        >
-            {name}
-        </Link>
-    )
-}
+
+const navs: Navs[] = [
+    {
+        name: "Tentang",
+        path: "/about"
+    },
+    {
+        name: "Layanan Kami",
+        path: "/#layanan"
+    },
+    {
+        name: "Paket",
+        path: "",
+        submenu: [
+            {
+                name: "Paket Standar",
+                path: "/#paket-standar"
+            },
+            {
+                name: "Paket Fleksibel",
+                path: "/#paket-fleksibel"
+            },
+        ]
+    },
+    {
+        name: "FAQ",
+        path: "/#faq"
+    },
+]
