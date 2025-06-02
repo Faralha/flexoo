@@ -137,6 +137,10 @@ const navs: Navs[] = [
         path: "/about"
     },
     {
+        name: "Klien",
+        path: "/#klien"
+    },
+    {
         name: "Layanan Kami",
         path: "/#layanan"
     },

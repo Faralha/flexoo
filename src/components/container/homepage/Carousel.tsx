@@ -42,7 +42,7 @@ const slideClient = [
 
 export default function Carousel() {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full py-16">
+    <div className="flex flex-col items-center justify-center w-full h-full py-16" id="klien">
       <h1 className="font-bold mb-6">
         Our Clients
       </h1>
