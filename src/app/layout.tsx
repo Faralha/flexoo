@@ -17,17 +17,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Flexoo - Software House",
-    description: "Flexoo software house TC",
+    description: "Sofware House dengan harga fleksibel untuk berbagai kebutuhan. #FlexUrWebWithFlexoo",
     siteName: "Flexoo",
-    images: ["https://flexoo.vercel.app/logo/logo-with-text.png"],
+    images: ["https://flexoo.id/logo/logo-with-text.png"],
     type: "website",
     locale: "id_ID",
   },
   twitter: {
     title: "Flexoo - Software House",
     card: "summary_large_image",
-    description: "Flexoo software house TC",
-    images: ["https://flexoo.vercel.app/logo/logo-with-text.png"],
+    description: "Sofware House dengan harga fleksibel untuk berbagai kebutuhanmu. #FlexUrWebWithFlexoo",
+    images: ["https://flexoo.id/logo/logo-with-text.png"],
   },
 };
 

@@ -9,7 +9,7 @@ export default function HeroSection() {
             <div className="flex-1 space-y-5 flex flex-col items-center lg:items-start gap-5">
                 <div className="text-white-primary space-y-5">
                     <Typography weight="regular">
-                        #FlexingYourWebsite
+                        #FlexUrWebWithFlexoo
                     </Typography>
                     <Typography 
                         variant="h2"
@@ -31,7 +31,7 @@ export default function HeroSection() {
                     widthVariant="max"
                     hrefPath="https://its.id/m/FormPengajuanProject"
                 >
-                    Ajukan Project
+                    AJUKAN PROYEK
                 </ButtonLink>
             </div>
 
@@ -40,6 +40,7 @@ export default function HeroSection() {
                     src="/logo/logo.png"
                     fill
                     alt="logo flexoo"
+                    loading="eager"
                 />
             </figure>
         </section>

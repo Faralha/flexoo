@@ -15,11 +15,11 @@ export default function OurServicesSection() {
                     variant="h1"
                     weight="bold"
                 >
-                    Kami Menyediakan Berbagai Macam Layanan
+                    Layanan Kami
                 </Typography>
             </div>
 
-            <div className="flex gap-5 flex-col flex-1">
+            <div className="flex gap-5 flex-col flex-2">
                 {servicesData.map((data, i) => 
                     <div
                         key={i}  

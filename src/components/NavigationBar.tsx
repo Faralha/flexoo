@@ -124,7 +124,7 @@ function NavigationItems({
                 widthVariant="max"
                 target="_blank"
             >
-                Ajukan Project
+                AJUKAN PROYEK
             </ButtonLink>
         </>
     )

@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-5 md:gap-12 items-center mt-16 px-4 lg:px-16">
-          <div className="text-sm">&#169; HMTC Software House TC 2024</div>
+          <div className="text-sm">&#169; HMTC Software House TC 2025</div>
 
           <div className="h-[1px] w-full bg-black-primary flex-1"></div>
         </div>

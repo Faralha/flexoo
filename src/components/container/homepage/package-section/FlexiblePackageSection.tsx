@@ -46,7 +46,7 @@ export default function FlexiblePackageSection() {
                     widthVariant="max"
                     size="lg"
                 >
-                    Coba paket fleksibel
+                    COBA PAKET FLEKSIBEL
                 </ButtonLink>
             </div>
         </section>
@@ -54,9 +54,9 @@ export default function FlexiblePackageSection() {
 }
 
 const flexiblePackageData = [
-    "menuliskan sendiri ekspektasi biaya proyeknya",
-    "membuat produk selain website",
-    "dibantu di hanya sebagian SDM IT, seperti dibantu hanya untuk Frontend, Backend, atau UI/UX saja",
-    "dibantu di sisa progress yang ada",
-    "mengatur sendiri waktu pengerjaannya berapa lama",
+    "Menuliskan sendiri ekspektasi biaya proyeknya",
+    "Membuat produk selain website",
+    "Dibantu di hanya sebagian SDM IT, seperti dibantu hanya untuk Frontend, Backend, atau UI/UX saja",
+    "Dibantu di sisa progress yang ada",
+    "Mengatur sendiri waktu pengerjaannya berapa lama",
 ]
